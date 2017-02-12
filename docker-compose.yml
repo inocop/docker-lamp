@@ -1,0 +1,19 @@
+version: '2'
+services:
+  db:
+    container_name: testing_db
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=testing
+      - MYSQL_PASSWORD=testing
+      - MYSQL_DATABASE=testing
+  web:
+    container_name: testing_web
+    build: ./web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
