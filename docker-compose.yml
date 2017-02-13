@@ -1,6 +1,7 @@
 version: '2'
 services:
   testing_db:
+    container_name: testing_db
     image: mysql:5.6
     ports:
       - "3306:3306"
@@ -11,6 +12,7 @@ services:
       - MYSQL_DATABASE=testing
 
   testing_web:
+    container_name: testing_web
     build: ./web
     ports:
       - "8080:80"
