@@ -13,5 +13,4 @@ RUN yum install --enablerepo=epel,remi-php56,remi -y \
                               php-xml
 RUN sed -i -e "s|^;date.timezone =.*$|date.timezone = Asia/Tokyo|" /etc/php.ini
 
-EXPOSE 80
 CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
