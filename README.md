@@ -8,3 +8,9 @@ $ docker-compose up -d
 $ docker exec -it testing_web bash
 $ docker exec -it testing_db bash
 ```
+
+## Author
+incop
+
+## License
+MIT
