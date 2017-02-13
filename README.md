@@ -10,7 +10,7 @@ $ docker exec -it testing_db bash
 ```
 
 ## Author
-incop
+inocop
 
 ## License
 MIT
