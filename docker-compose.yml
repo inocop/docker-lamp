@@ -10,6 +10,8 @@ services:
       - MYSQL_USER=testing
       - MYSQL_PASSWORD=testing
       - MYSQL_DATABASE=testing
+    volumes:
+      ./db/conf.d:/etc/mysql/conf.d
 
   testing_web:
     container_name: testing_web
@@ -18,3 +20,4 @@ services:
       - "8080:80"
     volumes:
       - ./src:/var/www/html
+      - ./web/php.d:/etc/php.d

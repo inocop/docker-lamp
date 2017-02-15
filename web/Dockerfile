@@ -11,8 +11,11 @@ RUN yum install --enablerepo=epel,remi-php56,remi -y \
                               php-gd \
                               php-mbstring \
                               php-mysqlnd \
+                              php-mysqli \
                               php-pdo \
                               php-xml
-RUN sed -i -e "s|^;date.timezone =.*$|date.timezone = Asia/Tokyo|" /etc/php.ini
 
-CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
+#RUN sed -i -e "s|^;date.timezone =.*$|date.timezone = Asia/Tokyo|" /etc/php.ini
+
+CMD service httpd restart
+CMD chkconfig httpd on
