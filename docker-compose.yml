@@ -11,7 +11,7 @@ services:
       - MYSQL_PASSWORD=testing
       - MYSQL_DATABASE=testing
     volumes:
-      ./db/conf.d:/etc/mysql/conf.d
+      - ./db/conf.d:/etc/mysql/conf.d
 
   testing_web:
     container_name: testing_web

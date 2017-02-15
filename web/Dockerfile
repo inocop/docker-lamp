@@ -15,7 +15,7 @@ RUN yum install --enablerepo=epel,remi-php56,remi -y \
                               php-pdo \
                               php-xml
 
-#RUN sed -i -e "s|^;date.timezone =.*$|date.timezone = Asia/Tokyo|" /etc/php.ini
+# enable .htaccess
+RUN sed -i -e "s/AllowOverride None/AllowOverride All/g" /etc/httpd/conf/httpd.conf
 
-CMD service httpd restart
-CMD chkconfig httpd on
+CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
