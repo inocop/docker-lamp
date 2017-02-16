@@ -15,6 +15,9 @@ RUN yum install --enablerepo=epel,remi-php56,remi -y \
                               php-pdo \
                               php-xml
 
+# set custom_php.ini
+COPY ./custom_php.ini /etc/php.d/
+
 # enable .htaccess
 RUN sed -i -e "s/AllowOverride None/AllowOverride All/g" /etc/httpd/conf/httpd.conf
 

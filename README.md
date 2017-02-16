@@ -5,8 +5,8 @@ $ docker-compose up -d
 
 ## bash in container
 ```
-$ docker exec -it testing_web bash
-$ docker exec -it testing_db bash
+$ docker exec -it dockercomposelamp_web_1 bash
+$ docker exec -it dockercomposelamp_db_1 bash
 ```
 
 ## Author
