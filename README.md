@@ -1,3 +1,9 @@
+## Software version
+```
+$ docker --version
+Docker version 1.13.1, build 092cba3
+```
+
 ## create & start
 ```
 $ docker-compose up -d
