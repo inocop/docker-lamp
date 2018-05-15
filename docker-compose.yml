@@ -9,6 +9,8 @@ services:
       - MYSQL_USER=testing
       - MYSQL_PASSWORD=testing
       - MYSQL_DATABASE=testing
+    volumes:
+      - lamp_db:/var/lib/mysql
 
   web:
     build: ./web
@@ -16,3 +18,7 @@ services:
       - "8080:80"
     volumes:
       - ./src:/var/www/html
+
+volumes:
+  lamp_db:
+    driver: 'local'
