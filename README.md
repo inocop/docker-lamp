@@ -1,7 +1,7 @@
 ## Software version
 ```
 $ docker --version
-Docker version 1.13.1, build 092cba3
+Docker version 18.03.1-ce, build 9ee9f40
 ```
 
 ## create & start
